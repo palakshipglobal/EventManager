@@ -44,9 +44,7 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleIsOpen = () => {
@@ -70,7 +68,6 @@ const Navbar = () => {
             </p>
           ))}
         </div>
-
         <div className="hidden md:block">
           <button className="rounded-lg py-2 px-4 bg-gray-50 text-blue-700 mr-3 text-sm">Login</button>
           <button className="rounded-lg py-2 px-4 bg-blue-700 text-white mr-3 text-sm hover:bg-blue-600">
