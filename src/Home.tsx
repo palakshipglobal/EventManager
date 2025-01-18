@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import home from "./assets/home.webp";
 import { Star, Banknote, BellRing, AlarmClockCheck, AudioWaveform, Menu } from "lucide-react";
 const Home = () => {
   return (
@@ -14,37 +15,24 @@ const Home = () => {
         <button className="text-white bg-blue-700 hover:bg-blue-600 rounded-full text-sm px-4 py-2 my-3">
           Start orgainising
         </button>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-10 md:mt-14 mt-10">
-          <div className="border border-gray-300 p-2 rounded-md text-sm text-gray-800">
-            <div className="flex items-center gap-1">
-              <Star className="size-5 fill-blue-700 text-white" />
-              4.9 Customer Rating
-            </div>
-          </div>
-          <div className="border border-gray-300 p-2 rounded-md text-sm text-gray-800">
-            <div className="flex items-center gap-1">
-              <Banknote className="size-5 fill-blue-700 text-white" />
-              Completely Free
-            </div>
-          </div>
-          <div className="border border-gray-300 p-2 rounded-md text-sm text-gray-800">
-            <div className="flex items-center gap-1">
-              <BellRing className="size-5 fill-blue-700 text-white mt-1" />
-              Reminders and Alerts
-            </div>
-          </div>
-          <div className="border border-gray-300 p-2 rounded-md text-sm text-gray-800">
-            <div className="flex items-center gap-1">
-              <AlarmClockCheck className="size-5 fill-blue-700 text-white" />
-              Push Notifications
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-10 mt-10">
+          <InfoCard Icon={Star} text="4.9 Customer Rating" />
+          <InfoCard Icon={Banknote} text="Completely Free" />
+          <InfoCard Icon={BellRing} text="Reminders and Alerts" />
+          <InfoCard Icon={AlarmClockCheck} text="Push Notifications" />
+        </div>
+      </div>
+      <div className="mt-10 px-32">
+        <div className="bg-gray-100 rounded-xl p-3 animate-floating">
+        <img src={home} alt="" className="h-[720px] w-full rounded-xl" />
         </div>
       </div>
     </div>
   );
 };
+
 export default Home;
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleIsOpen = () => {
@@ -88,6 +76,17 @@ const Navbar = () => {
           ))}
         </div>
       )}
+    </div>
+  );
+};
+
+const InfoCard = ({ Icon, text }) => {
+  return (
+    <div className="border border-gray-300 p-2 rounded-md text-sm text-gray-800">
+      <div className="flex items-center gap-1">
+        <Icon className="size-5 fill-blue-700 text-white" />
+        {text}
+      </div>
     </div>
   );
 };
