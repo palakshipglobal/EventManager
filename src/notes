@@ -1,0 +1,54 @@
+<!-- {/* Scheduling Section */}
+        {/* <div>
+          
+          <div className="mt-10 md:mt-16 grid grid-cols-1 md:grid-cols-2 lg:px-32 gap-5 lg:gap-14 p-3">
+            <div className="rounded-xl">
+              <p className="text-xl font-medium">
+                Effortless <span className="text-blue-600">Scheduling</span> for every task in your day
+              </p>
+              <p className="text-sm text-gray-800 mt-5">
+                Say <span className="font-medium">goodbye</span> to the hassale of managing your calender. EveManage
+                streamlines your scheduling process, helping you <span className="font-medium">plan, organize</span> and
+                stay on top of your commitments with ease. From <span className="font-medium">automated reminders</span>{" "}
+                to seamless integration with your favorite tools, we ensure you never miss a beat.
+              </p>
+              <div className="grid grid-cols-2 mt-7 gap-y-3">
+                <EventFeature Icon={Calendar1} label="Single day events" />
+                <EventFeature Icon={CalendarCheck} label="Multiple day events" />
+                <EventFeature Icon={Clock} label="Timed entry" />
+                <EventFeature Icon={CalendarDays} label="Recurring events" />
+              </div>
+              <div className="flex md:justify-end justify-center items-center mr-20">
+                <Button text="Create new Event" className="bg-blue-600 text-white lg:mr-3 hover:bg-blue-500 mt-5" />
+              </div>
+            </div>
+            <img src={f1} className="rounded-xl hover:scale-105 transition duration-300 md:mt-10 lg:mt-0" />
+          </div>
+        </div> */}
+
+        {/* No contracts Section */}
+        {/* <div className="md:mt-20 mt-5 grid grid-cols-1 md:grid-cols-2 lg:px-32 gap-14 p-3">
+          <img src={f2} className="rounded-xl hover:scale-105 transition duration-300 md:mt-10 lg:mt-0" />
+
+          <div className="rounded-xl">
+            <p className="text-3xl font-medium">
+              No <span className="text-blue-600">Contracts</span> and No Commitments
+            </p>
+            <p className="text-sm text-gray-800 mt-5">
+              <span className="font-medium">With</span> us, you always have complete freedom over your event. All the
+              incredible tools our ticketing solutions has to offer are
+              <span className="font-medium">available to everyone</span> from the start with
+              <span className="font-medium">no contracts</span> or <span className="font-medium">hidden fees</span> to
+              worry about. We believe in
+              <span className="font-medium">
+                {" "}
+                simplicity and transparency, giving you all the features upfront without
+              </span>{" "}
+              locking you into unnecessary commitments.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 mt-4 lg:mt-7 gap-y-3">
+              <EventFeature Icon={CreditCard} label="No credit cards required" />
+              <EventFeature Icon={Infinity} label="Unlimited features" />
+            </div>
+          </div>
+        </div> */} -->
