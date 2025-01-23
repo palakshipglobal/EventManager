@@ -7,6 +7,7 @@ import HeroSection from "./HeroSection";
 import Navbar from "./Navbar";
 import TabComponent from "./TabComponent";
 import Benefits from "./Benefits";
+import FAQ from "./FAQ";
 
 const Home = () => {
   const heroSectionRef = useRef(null);
@@ -29,6 +30,7 @@ const Home = () => {
         <Benefits refs={refs} />
         <GradientBanner />
         <Price />
+        <FAQ />
       </div>
       <Footer />
     </div>

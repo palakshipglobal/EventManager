@@ -1,6 +1,7 @@
 import React from "react";
 import { Instagram, Facebook, Navigation, Copyright } from "lucide-react";
-import logo from "/logo.png";
+import logo from "../assets/Logo.png";
+
 const Footer = () => {
   const data = [
     {
@@ -18,7 +19,7 @@ const Footer = () => {
   ];
   return (
     <div>
-      <div className="bg-gray-100 mt-16 py-10 px-6 md:px-12 lg:px-16">
+      <div className="bg-gray-100 mt-24 py-10 px-6 md:px-12 lg:px-16">
         <div className="flex justify-between gap-4 sm:gap-2 cursor-pointer">
           <div className="flex gap-2">
             <img src={logo} className="h-7 w-7" />
