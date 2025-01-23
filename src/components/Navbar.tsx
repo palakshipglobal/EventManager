@@ -1,27 +1,25 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Menu } from "lucide-react";
 import logo from "/logo.png";
-import { Button } from "./Home";
+import Button from "./Button";
 
-const Navbar = () => {
+const Navbar = ({ refs }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleIsOpen = () => {
     setIsOpen(!isOpen);
   };
+
   const navigationItems = [
-    { name: "Home", id: "home" },
-    { name: "Features", id: "features" },
-    { name: "Benefits", id: "benefits" },
-    { name: "About Us", id: "about-us" },
+    { name: "Home", ref: refs.heroSectionRef },
+    { name: "Features", ref: refs.featuresRef },
+    { name: "Benefits", ref: refs.benefitsRef },
+    { name: "About Us", ref: refs.aboutUsRef },
   ];
 
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollToSection = (sectionRef: any) => {
+    sectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <div>
       <div className="fixed bg-white z-50 w-full flex py-3 px-6 md:px-12 lg:px-16 justify-between items-center cursor-pointer">
@@ -33,7 +31,7 @@ const Navbar = () => {
         </div>
         <div className="md:flex md:gap-7 hidden">
           {navigationItems.map((item, index) => (
-            <p key={index} className="cursor-pointer group flex flex-col" onClick={() => scrollToSection(item.id)}>
+            <p key={index} className="cursor-pointer group flex flex-col" onClick={() => scrollToSection(item.ref)}>
               <span>{item.name}</span>
               <span className="w-0 h-0.5 bg-blue-700 transition-all duration-500 ease-in-out group-hover:w-full"></span>
             </p>
@@ -50,12 +48,12 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden flex flex-col gap-4 p-2 fixed right-5 w-32 shadow-md bg-white rounded-lg">
+        <div className="md:hidden flex flex-col gap-4 mt-14 py-2 fixed right-5 w-32 shadow-md bg-white rounded-lg">
           {navigationItems.map((item, index) => (
             <p
               key={index}
               className="cursor-pointer ml-5 text-sm group flex flex-col"
-              onClick={() => scrollToSection(item.id)}
+              onClick={() => scrollToSection(item.ref)}
             >
               <span>{item.name}</span>
               <span className="w-0 h-0.5 bg-blue-700 transition-all duration-500 ease-in-out group-hover:w-14"></span>

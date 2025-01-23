@@ -1,9 +1,9 @@
 import React from "react";
-import { Button } from "./Home";
+import Button from "./Button";
 
 const GradientBanner = () => {
   return (
-    <div className="lg:px-20">
+    <div className="lg:px-28 p-2 md:p-4">
       <div className="flex flex-col items-center justify-center mt-16 text-center bg-gradient-to-br from-pink-600 via-red-500 to-yellow-300 text-white px-5 py-16 rounded-lg">
         <p className="text-3xl font-medium">Join 2,078,753 customers already using EveManage Apps</p>
         <p className="mt-4">Get the taste of 80+ powerful apps by EveManage. No credit card. Joining is free!</p>

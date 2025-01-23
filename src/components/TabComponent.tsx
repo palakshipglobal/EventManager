@@ -3,11 +3,12 @@ import EventFeatures from "./EventFeatures";
 import BlogFeatures from "./BlogFeatures";
 import { useState } from "react";
 import TodoFeatures from "./TodoFeatures";
-const TabComponent = () => {
+
+const TabComponent = ({ refs }) => {
   const [activeTab, setActiveTab] = useState("events");
 
   return (
-    <div className="lg:px-32 mt-16 md:mt-24">
+    <div className="lg:px-28 mt-16 md:mt-24 p-2 md:p-4">
       <div className="grid grid-cols-3 text-center text-xl text-gray-800 border-b-2 border-gray-200">
         <p
           className={`cursor-pointer font-semibold ${
@@ -35,7 +36,7 @@ const TabComponent = () => {
         </p>
       </div>
 
-      <div>
+      <div ref={refs.featuresRef}>
         {activeTab === "events" && <EventFeatures />}
         {activeTab === "todos" && <TodoFeatures />}
         {activeTab === "blogs" && <BlogFeatures />}

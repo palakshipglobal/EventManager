@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import { Button } from "./Home";
+import Button from "./Button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 const Price = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -12,7 +12,7 @@ const Price = () => {
       description2: "Free forever",
       price: "0",
       text: "Get Started",
-      className: "rounded-tl-lg rounded-bl-lg",
+     
     },
     {
       packageLabel: "Basic",
@@ -34,7 +34,7 @@ const Price = () => {
       description2: "Billed yearly",
       price: "20",
       text: "Try for free",
-      className: "rounded-tr-lg rounded-br-lg",
+    
     },
   ];
 
@@ -67,7 +67,7 @@ const Price = () => {
               description2={card.description2}
               price={card.price}
               text={card.text}
-              className={card.className}
+             
               index={index}
               activeIndex={activeIndex}
             />
@@ -114,7 +114,7 @@ const PricingCard = ({
 }: PricingCardProps) => {
   return (
     <div
-      className={`duration-300 relative bg-white shadow-md px-10 py-6 cursor-pointer ${className} ${
+      className={`duration-300 rounded-lg relative shadow-md px-10 py-6 cursor-pointer ${className} ${
         index === activeIndex && "scale-105 bg-blue-200 z-10"
       }`}
     >

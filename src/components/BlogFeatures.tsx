@@ -6,9 +6,8 @@ import edit from "../assets/edit.png";
 import web from "../assets/web.png";
 import metrics from "../assets/performance-metrics.png";
 import management from "../assets/management.png";
-import search from "../assets/search.png";
 import template from "../assets/template.png";
-import { BenefitsCard } from "./Home";
+import BenefitCard from "./BenefitCard";
 
 const BlogFeatures = () => {
   const benefits = [
@@ -61,24 +60,18 @@ const BlogFeatures = () => {
       Icon: edit,
       className: "bg-indigo-100",
     },
-    {
-      label: "Mobile-Friendly",
-      description: "Create and publish blogs on the go with mobile responsiveness.",
-      Icon: search,
-      className: "bg-lime-100",
-    },
   ];
 
   return (
-    <div className="md:mt-10 p-5 mt-6">
-      <p className="text-2xl font-medium animate-appear">
-        Express your ideas and share valuable <span className="text-blue-600">insights</span> with our blogging feature.
-        Whether you’re a hobbyist, professional, or business owner, our platform makes content creation{" "}
-        <span className="text-blue-600">easy and engaging</span>.
+    <div className="md:mt-10 mt-6 flex flex-col items-center justify-center">
+      <p className=" md:text-2xl text-xl font-medium animate-appear">
+        Express your ideas and share valuable <span className="text-blue-600 md:text-3xl text-2xl">insights</span> with
+        our blogging feature. Whether you’re a hobbyist, professional, or business owner, our platform makes content
+        creation <span className="text-blue-600 md:text-3xl text-2xl">easy and engaging</span>.
       </p>
-      <div className="flex gap-5 mt-10 overflow-auto shadow-md rounded-lg  hide-scrollbar px-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-14 md:gap-8 gap-x-10 mt-10 md:mt-16">
         {benefits.map((benefit, index) => (
-          <BenefitsCard
+          <BenefitCard
             key={index}
             label={benefit.label}
             description={benefit.description}
@@ -87,9 +80,10 @@ const BlogFeatures = () => {
           />
         ))}
       </div>
-      <p className="text-2xl mt-8 md:mt-14 text-center font-medium">
-        With our blogging feature, you can <span className="font-bold">establish your online presence</span> and
-        <span className="font-bold"> connect with your audience effortlessly</span>.
+      <p className="md:text-2xl text-xl mt-8 md:mt-14 text-center font-medium">
+        With our blogging feature, you can{" "}
+        <span className="font-bold md:text-3xl text-2xl">establish your online presence</span> and
+        <span className="font-bold md:text-3xl text-2xl"> connect with your audience effortlessly</span>.
       </p>
     </div>
   );

@@ -3,7 +3,7 @@ import image4 from "../assets/image4.png";
 
 const SchedulingBanner = () => {
   return (
-    <div className="lg:px-20 mt-12 lg:mt-28">
+    <div className="lg:px-28 mt-12 lg:mt-28 p-2 md:p-4">
       <div className="bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 text-white grid grid-cols-1 md:grid-cols-2 rounded-xl lg:gap-10">
         <div className="lg:px-10 p-5 lg:pt-20 pt-10">
           <p className="text-3xl font-semibold">Take your Scheduling to next level</p>
@@ -20,7 +20,7 @@ const SchedulingBanner = () => {
           </div>
         </div>
         <div>
-          <img src={image4} className="h-96 w-full mt-2 md:block hidden" />
+          <img src={image4} className="h-96 w-full pr-2 md:block hidden" />
         </div>
       </div>
     </div>

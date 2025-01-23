@@ -41,25 +41,24 @@ const TodoFeatures = () => {
   ];
   return (
     <div className="p-3 md:mt-16 mt-8">
-      <p className="text-2xl font-medium animate-appear">
-        Stay productive and organized with our <span className="text-blue-600">to-do list feature</span>. Whether you're
-        managing work projects or personal tasks, this feature helps you achieve your goals efficiently.
+      <p className="md:text-2xl text-xl font-medium animate-appear">
+        Stay productive and organized with our{" "}
+        <span className="text-blue-600 md:text-3xl text-2xl">to-do list feature</span>. Whether you're managing work
+        projects or personal tasks, this feature helps you achieve your goals efficiently.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 md:mt-20 mt-8 gap-y-2 md:gap-y-5">
         {tasks.map((task, index) => (
-          //   <div key={index} className="flex gap-10">
           <div className="flex flex-col text-center p-3 md:p-5">
             <img src={task.icon} className="w-8 h-8 mx-auto" alt={task.title} />
             <p className="text-lg mt-2 md:mt-4 font-medium">{task.title}</p>
             <p className="text-sm text-gray-800 mt-2 md:mt-3">{task.description}</p>
           </div>
-          // {/* {!(index % 3 === 2) && <div className="h-44 w-1 bg-gray-200"></div>} */}
-          //   </div>
         ))}
       </div>
-      <p className="text-2xl md:mt-20 mt-8 text-center font-medium">
-        Take control of your day with our <span className="font-bold">to-do feature</span> and accomplish more with
-        <span className="font-bold"> less effort</span>.
+      <p className="md:text-2xl text-xl md:mt-20 mt-8 text-center font-medium">
+        Take control of your day with our <span className="font-bold md:text-3xl text-2xl">to-do feature</span> and
+        accomplish more with
+        <span className="font-bold md:text-3xl text-2xl"> less effort</span>.
       </p>
     </div>
   );
