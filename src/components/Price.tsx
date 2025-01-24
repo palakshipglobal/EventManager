@@ -12,7 +12,6 @@ const Price = () => {
       description2: "Free forever",
       price: "0",
       text: "Get Started",
-     
     },
     {
       packageLabel: "Basic",
@@ -34,7 +33,6 @@ const Price = () => {
       description2: "Billed yearly",
       price: "20",
       text: "Try for free",
-    
     },
   ];
 
@@ -67,7 +65,6 @@ const Price = () => {
               description2={card.description2}
               price={card.price}
               text={card.text}
-             
               index={index}
               activeIndex={activeIndex}
             />
@@ -114,22 +111,28 @@ const PricingCard = ({
 }: PricingCardProps) => {
   return (
     <div
-      className={`duration-300 rounded-lg relative shadow-md px-10 py-6 cursor-pointer ${className} ${
+      className={`duration-300 rounded-lg relative shadow-md px-7 md:px-10 py-6 cursor-pointer ${className} ${
         index === activeIndex && "scale-105 bg-blue-200 z-10"
       }`}
     >
-      <p className="font-semibold text-2xl mt-3">{packageLabel}</p>
-      <p className="text-xs mt-2">{description}</p>
-      <div className="flex mt-5">
-        <p className="text-sm text-gray-700">$</p>
-        <span className="text-4xl text-black">{price}</span>
-        <p className="text-sm text-gray-700 mt-4">/mo</p>
+      <div className="flex justify-between md:flex-col">
+        <div>
+          <p className="font-semibold text-2xl mt-3">{packageLabel}</p>
+          <p className="text-xs mt-2">{description}</p>
+        </div>
+        <div className="flex mt-3.5 md:mt-5">
+          <p className="text-sm text-gray-700">$</p>
+          <span className="text-4xl text-black">{price}</span>
+          <p className="text-sm text-gray-700 mt-4">/mo</p>
+        </div>
       </div>
-      <p className="text-lg text-gray-700 mt-2">{description2}</p>
-      <Button text={text} className="bg-blue-400 w-full hover:bg-blue-300 mt-8 px-10 py-3 rounded-md text-white" />
-      <p className="font-medium mt-8">Unlimited websites</p>
+      <p className="text-sm md:text-lg text-gray-700 mt-1 md:mt-2">{description2}</p>
+      <Button
+        text={text}
+        className="bg-blue-400 w-full hover:bg-blue-300 mt-4 md:mt-8 px-10 py-3 rounded-md text-white"
+      />
+      <p className="font-medium mt-4 md:mt-8">Unlimited websites</p>
       <p className="font-medium mt-1">200 views</p>
-
       <p className="mt-1">Projects</p>
       <p className="mt-1">Collaborators</p>
       <p className="mt-1 line-through text-gray-400">Advanced Customisations</p>

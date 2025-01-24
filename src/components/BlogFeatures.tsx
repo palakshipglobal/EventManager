@@ -69,7 +69,7 @@ const BlogFeatures = () => {
         our blogging feature. Whether you’re a hobbyist, professional, or business owner, our platform makes content
         creation <span className="text-blue-600 md:text-3xl text-2xl">easy and engaging</span>.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-10 lg:gap-x-24 mt-10 md:mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-10 lg:gap-x-24 gap-y-5 mt-10 md:mt-16">
         {benefits.map((benefit, index) => (
           <BenefitCard
             key={index}

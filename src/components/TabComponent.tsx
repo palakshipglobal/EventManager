@@ -8,7 +8,7 @@ const TabComponent = ({ refs }) => {
   const [activeTab, setActiveTab] = useState("events");
 
   return (
-    <div className="lg:px-28 mt-16 md:mt-24 p-2 md:p-4">
+    <div className="lg:px-28 mt-16 md:mt-24 p-2 md:p-6">
       <div className="grid grid-cols-3 text-center text-xl text-gray-800 border-b-2 border-gray-200">
         <p
           className={`cursor-pointer font-semibold ${
