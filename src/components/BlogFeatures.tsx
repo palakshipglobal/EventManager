@@ -64,12 +64,12 @@ const BlogFeatures = () => {
 
   return (
     <div className="md:mt-10 mt-6 flex flex-col items-center justify-center">
-      <p className=" md:text-2xl text-xl font-medium animate-appear">
+      <p className="md:text-2xl text-xl font-medium animate-appear md:px-8 text-center">
         Express your ideas and share valuable <span className="text-blue-600 md:text-3xl text-2xl">insights</span> with
         our blogging feature. Whether you’re a hobbyist, professional, or business owner, our platform makes content
         creation <span className="text-blue-600 md:text-3xl text-2xl">easy and engaging</span>.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-14 md:gap-8 gap-x-10 mt-10 md:mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-10 lg:gap-x-24 mt-10 md:mt-16">
         {benefits.map((benefit, index) => (
           <BenefitCard
             key={index}
@@ -81,8 +81,8 @@ const BlogFeatures = () => {
         ))}
       </div>
       <p className="md:text-2xl text-xl mt-8 md:mt-14 text-center font-medium">
-        With our blogging feature, you can{" "}
-        <span className="font-bold md:text-3xl text-2xl">establish your online presence</span> and
+        With our blogging feature, you can
+        <span className="font-bold md:text-3xl text-2xl"> establish your online presence</span> and
         <span className="font-bold md:text-3xl text-2xl"> connect with your audience effortlessly</span>.
       </p>
     </div>

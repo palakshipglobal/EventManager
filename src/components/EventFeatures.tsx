@@ -63,8 +63,8 @@ const EventFeatures = () => {
     },
   ];
   return (
-    <div className="md:mt-16 p-3 mt-8">
-      <p className="md:text-2xl text-xl font-medium animate-appear">
+    <div className="md:mt-10 mt-6">
+      <p className="md:text-2xl text-xl font-medium animate-appear text-center">
         Effortlessly organize your schedule with our{" "}
         <span className="text-blue-600 md:text-3xl text-2xl">event calendar feature</span>. Whether you're planning{" "}
         <span className="text-blue-600 md:text-3xl text-2xl">personal activities</span> or{" "}

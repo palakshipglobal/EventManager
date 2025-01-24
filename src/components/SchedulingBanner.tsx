@@ -12,7 +12,7 @@ const SchedulingBanner = () => {
             than ever. Intuitive reminders and alerts ensure you never miss a deadline, while its user-friendly
             interface and powerful tools help you stay organized and prioritize tasks effectively.
           </p>
-          <div className="grid grid-cols-2">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-y-2">
             <button className="rounded-lg py-2.5 px-4 bg-white text-blue-600 mr-3 text-sm font-base">
               Sign up for free
             </button>

@@ -8,24 +8,26 @@ const FAQ = () => {
   const [activeFaq, setActiveFaq] = useState("events");
 
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 p-2 md:p-4 lg:px-28 mt-14 md:mt-20 md:gap-24 gap-10">
-      <div className="flex flex-col">
-        <p className="text-3xl font-semibold text-center md:text-start">FAQs</p>
-        <p className="mt-6 font-medium text-center md:text-start">
-          Everything you need to know about <span className="text-lg text-blue-600">Events, To-Dos, Blogs</span> and{" "}
-          <span className="text-lg text-blue-600">Account & Privacy</span>
-        </p>
-        <div className="grid grid-cols-2 gap-x-14 lg:gap-x-28 gap-y-5 mt-5 px-10 md:px-0 items-center justify-center">
-          <FAQButton text="events" label="Events" onClick={() => setActiveFaq("events")} activeFaq={activeFaq} />
-          <FAQButton text="todos" label="Todos" onClick={() => setActiveFaq("todos")} activeFaq={activeFaq} />
-          <FAQButton text="blogs" label="Blogs" onClick={() => setActiveFaq("blogs")} activeFaq={activeFaq} />
-          <FAQButton text="privacy" label="Privacy" onClick={() => setActiveFaq("privacy")} activeFaq={activeFaq} />
+    <div className="p-2 md:p-4 lg:px-24 mt-14 md:mt-20">
+      <div className="grid md:grid-cols-2 grid-cols-1 shadow-xl md:py-5 md:px-8 rounded-lg md:gap-16 lg:gap-24 gap-10">
+        <div className="flex flex-col">
+          <p className="text-3xl font-semibold text-center md:text-start">FAQs</p>
+          <p className="mt-6 font-medium text-center md:text-start">
+            Everything you need to know about <span className="text-lg text-blue-600">Events, To-Dos, Blogs</span> and{" "}
+            <span className="text-lg text-blue-600">Account & Privacy</span>
+          </p>
+          <div className="grid grid-cols-2 gap-x-14 lg:gap-x-28 gap-y-5 mt-5 px-10 md:px-0 items-center justify-center">
+            <FAQButton text="events" label="Events" onClick={() => setActiveFaq("events")} activeFaq={activeFaq} />
+            <FAQButton text="todos" label="Todos" onClick={() => setActiveFaq("todos")} activeFaq={activeFaq} />
+            <FAQButton text="blogs" label="Blogs" onClick={() => setActiveFaq("blogs")} activeFaq={activeFaq} />
+            <FAQButton text="privacy" label="Privacy" onClick={() => setActiveFaq("privacy")} activeFaq={activeFaq} />
+          </div>
         </div>
+        {activeFaq === "events" && <FAQEvent />}
+        {activeFaq === "todos" && <FAQTodo />}
+        {activeFaq === "blogs" && <FAQBlog />}
+        {activeFaq === "privacy" && <FAQPrivacy />}
       </div>
-      {activeFaq === "events" && <FAQEvent />}
-      {activeFaq === "todos" && <FAQTodo />}
-      {activeFaq === "blogs" && <FAQBlog />}
-      {activeFaq === "privacy" && <FAQPrivacy />}
     </div>
   );
 };

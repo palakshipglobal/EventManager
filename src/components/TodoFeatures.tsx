@@ -40,8 +40,8 @@ const TodoFeatures = () => {
     },
   ];
   return (
-    <div className="p-3 md:mt-16 mt-8">
-      <p className="md:text-2xl text-xl font-medium animate-appear">
+    <div className="md:mt-10 mt-6">
+      <p className="md:text-2xl text-xl font-medium animate-appear text-center">
         Stay productive and organized with our{" "}
         <span className="text-blue-600 md:text-3xl text-2xl">to-do list feature</span>. Whether you're managing work
         projects or personal tasks, this feature helps you achieve your goals efficiently.
