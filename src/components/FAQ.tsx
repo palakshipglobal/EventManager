@@ -8,7 +8,7 @@ const FAQ = () => {
   const [activeFaq, setActiveFaq] = useState("events");
 
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 p-2 md:p-4 lg:px-28 mt-12 md:mt-20 md:gap-24 gap-10">
+    <div className="grid md:grid-cols-2 grid-cols-1 p-2 md:p-4 lg:px-28 mt-14 md:mt-20 md:gap-24 gap-10">
       <div className="flex flex-col">
         <p className="text-3xl font-semibold text-center md:text-start">FAQs</p>
         <p className="mt-6 font-medium text-center md:text-start">

@@ -13,7 +13,6 @@ const Home = () => {
   const heroSectionRef = useRef(null);
   const featuresRef = useRef(null);
   const benefitsRef = useRef(null);
-
   const refs = {
     heroSectionRef,
     featuresRef,

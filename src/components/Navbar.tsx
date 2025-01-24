@@ -21,7 +21,7 @@ const Navbar = ({ refs }) => {
   };
 
   return (
-    <div>
+    <div ref={refs.heroSectionRef}>
       <div className="fixed bg-white z-50 w-full flex py-3 px-6 md:px-12 lg:px-16 justify-between items-center cursor-pointer">
         <div className="flex items-start gap-2">
           <img src={logo} className="h-7 w-7" />

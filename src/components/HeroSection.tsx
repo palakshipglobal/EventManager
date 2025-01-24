@@ -27,8 +27,8 @@ const HeroSection = ({ refs }) => {
   ];
 
   return (
-    <div>
-      <div ref={refs.heroSectionRef} className="flex flex-col items-center justify-center">
+    <div ref={refs.heroSectionRef}>
+      <div className="flex flex-col items-center justify-center">
         <p className="md:text-3xl text-lg md:mt-24 mt-20 font-semibold text-center">
           Streamline your <span className="text-blue-700 md:text-4xl text-xl">Event Planning</span> effortlessly.
         </p>
