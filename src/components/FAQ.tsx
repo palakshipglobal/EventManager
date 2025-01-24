@@ -6,11 +6,12 @@ import FAQPrivacy from "./FAQPrivacy";
 
 const FAQ = () => {
   const [activeFaq, setActiveFaq] = useState("events");
+
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 p-2 md:p-4 lg:px-28 mt-32 md:gap-24 gap-10">
+    <div className="grid md:grid-cols-2 grid-cols-1 p-2 md:p-4 lg:px-28 mt-12 md:mt-20 md:gap-24 gap-10">
       <div className="flex flex-col">
         <p className="text-3xl font-semibold text-center md:text-start">FAQs</p>
-        <p className="mt-5 font-medium text-center md:text-start">
+        <p className="mt-6 font-medium text-center md:text-start">
           Everything you need to know about <span className="text-lg text-blue-600">Events, To-Dos, Blogs</span> and{" "}
           <span className="text-lg text-blue-600">Account & Privacy</span>
         </p>

@@ -25,7 +25,7 @@ const FAQEvent = () => {
     },
   ];
   return (
-    <div className="animate-appear">
+    <div className="animate-appear mt-12">
       {items.map((item, index) => (
         <Accordion key={index} title={item.title} description={item.description} />
       ))}
