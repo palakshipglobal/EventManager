@@ -1,18 +1,19 @@
 import React, { useRef } from "react";
-import Price from "./Price";
-import SchedulingBanner from "./SchedulingBanner";
-import GradientBanner from "./GradientBanner";
-import Footer from "./Footer";
-import HeroSection from "./HeroSection";
 import Navbar from "./Navbar";
+import HeroSection from "./HeroSection";
 import TabComponent from "./TabComponent";
+import SchedulingBanner from "./SchedulingBanner";
 import Benefits from "./Benefits";
+import GradientBanner from "./GradientBanner";
+import Price from "./Price";
 import FAQ from "./FAQ";
+import Footer from "./Footer";
 
 const Home = () => {
   const heroSectionRef = useRef(null);
   const featuresRef = useRef(null);
   const benefitsRef = useRef(null);
+
   const refs = {
     heroSectionRef,
     featuresRef,
@@ -22,15 +23,13 @@ const Home = () => {
   return (
     <div>
       <Navbar refs={refs} />
-      <div>
-        <HeroSection refs={refs} />
-        <TabComponent refs={refs} />
-        <SchedulingBanner />
-        <Benefits refs={refs} />
-        <GradientBanner />
-        <Price />
-        <FAQ />
-      </div>
+      <HeroSection refs={refs} />
+      <TabComponent refs={refs} />
+      <SchedulingBanner />
+      <Benefits refs={refs} />
+      <GradientBanner />
+      <Price />
+      <FAQ />
       <Footer />
     </div>
   );
