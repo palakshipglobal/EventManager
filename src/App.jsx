@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import PageWrapper from "./PageWrapper";
+import Login from "./authentication/Login";
 
 function App() {
   const heroSectionRef = useRef(null);
@@ -23,6 +24,10 @@ function App() {
         { path: "/", element: <Home refs={refs} /> },
         { path: "/about-us", element: <About /> },
       ],
+    },
+    {
+      path: "/login",
+      element:<Login/>
     },
   ]);
   return <RouterProvider router={router} />;

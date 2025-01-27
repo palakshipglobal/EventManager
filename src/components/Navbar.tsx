@@ -30,8 +30,8 @@ const Navbar = ({ refs }) => {
   };
 
   return (
-    <div className="fixed bg-white z-50 w-full flex py-3 px-6 md:px-12 lg:px-16 justify-between items-center cursor-pointer">
-      <div className="flex items-start gap-2">
+    <div className="fixed bg-white z-50 w-full flex py-3 px-6 md:px-12 lg:px-16 justify-between items-center ">
+      <div className="flex items-start gap-2 cursor-pointer">
         <img src={logo} className="h-7 w-7" alt="Logo" />
         <p className="md:text-xl text-md font-medium">
           EveMana<span className="text-blue-700">ge</span>
@@ -40,7 +40,9 @@ const Navbar = ({ refs }) => {
       <div className="md:flex md:gap-7 hidden">
         {navigationItems.map((item, index) => (
           <p key={index} onClick={() => handleClick(item)} className="group cursor-pointer flex flex-col">
-            <span className="hover:text-blue-600 hover:scale-105 text-base duration-100">{item.name}</span>
+            <span className="hover:text-blue-600 hover:scale-105 text-base duration-100 cursor-pointer">
+              {item.name}
+            </span>
             <span className="w-0 h-0.5 bg-blue-700 transition-all duration-500 ease-in-out group-hover:w-full"></span>
           </p>
         ))}
@@ -49,13 +51,14 @@ const Navbar = ({ refs }) => {
         <Menu onClick={handleIsOpen} />
       </div>
       <div className="hidden md:block">
-        <div className="flex items-center justify-center gap-3">
-          <Button text="Login" className="bg-blue-700 text-white hover:bg-blue-600" />
-          <button className="px-2.5 py-1 rounded-full bg-blue-500 text-white">PJ</button>
+        <div className="flex items-center text-blue-600 justify-center gap-1 cursor-pointer">
+          <Link to="/login">Login</Link>
+          <p className="text-black">/</p>
+          <p>Register</p>
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden flex flex-col gap-4 mt-14 py-2 fixed right-5 w-32 shadow-md bg-white rounded-lg">
+        <div className="md:hidden flex flex-col gap-4 mt-44 py-2 fixed right-5 pl-2 w-32 shadow-md bg-white rounded-lg">
           {navigationItems.map((item, index) => (
             <p key={index} onClick={() => handleClick(item)} className="group cursor-pointer flex flex-col">
               <span className="hover:text-blue-600 hover:scale-105 text-base duration-100">{item.name}</span>
