@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu } from "lucide-react";
 import logo from "../assets/Logo.png";
 import Button from "./Button";
 
-const Navbar = ({ refs }: { refs?: any }) => {
+const Navbar = ({ refs }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleIsOpen = () => {
@@ -12,14 +12,21 @@ const Navbar = ({ refs }: { refs?: any }) => {
   };
 
   const navigationItems = [
-    { name: "Home", path: "/"},
-    { name: "Features", ref: refs.featuresRef },
-    { name: "Benefits", ref: refs.benefitsRef },
-    { name: "About Us", path: "/about-us"},
+    { name: "Home", path: "/", ref: refs.heroSectionRef },
+    { name: "Features", path: "/", ref: refs.featuresRef },
+    { name: "Benefits", path: "/", ref: refs.benefitsRef },
+    { name: "About Us", path: "/about-us" },
   ];
 
-  const scrollToSection = (sectionRef: any) => {
-    sectionRef.current.scrollIntoView({ behavior: "smooth" });
+  const navigate = useNavigate();
+
+  const handleClick = (item: any) => {
+    if (item.path) {
+      navigate(item.path);
+    }
+    if (item.ref) {
+      item.ref.current?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -31,23 +38,12 @@ const Navbar = ({ refs }: { refs?: any }) => {
         </p>
       </div>
       <div className="md:flex md:gap-7 hidden">
-        {navigationItems.map((item, index) =>
-          item.path ? (
-            <Link key={index} to={item.path} className="cursor-pointer group flex flex-col">
-              <span>{item.name}</span>
-              <span className="w-0 h-0.5 bg-blue-700 transition-all duration-500 ease-in-out group-hover:w-full"></span>
-            </Link>
-          ) : (
-            <p
-              key={index}
-              className="cursor-pointer group flex flex-col"
-              onClick={() => item.ref && scrollToSection(item.ref ? item.ref : "#")}
-            >
-              <span>{item.name}</span>
-              <span className="w-0 h-0.5 bg-blue-700 transition-all duration-500 ease-in-out group-hover:w-full"></span>
-            </p>
-          ),
-        )}
+        {navigationItems.map((item, index) => (
+          <p key={index} onClick={() => handleClick(item)} className="group cursor-pointer flex flex-col">
+            <span className="hover:text-blue-600 hover:scale-105 text-base duration-100">{item.name}</span>
+            <span className="w-0 h-0.5 bg-blue-700 transition-all duration-500 ease-in-out group-hover:w-full"></span>
+          </p>
+        ))}
       </div>
       <div className="md:hidden">
         <Menu onClick={handleIsOpen} />
@@ -55,28 +51,17 @@ const Navbar = ({ refs }: { refs?: any }) => {
       <div className="hidden md:block">
         <div className="flex items-center justify-center gap-3">
           <Button text="Login" className="bg-blue-700 text-white hover:bg-blue-600" />
-          <button className="w-9 h-9 rounded-full bg-blue-500 text-white">PJ</button>
+          <button className="px-2.5 py-1 rounded-full bg-blue-500 text-white">PJ</button>
         </div>
       </div>
       {isOpen && (
         <div className="md:hidden flex flex-col gap-4 mt-14 py-2 fixed right-5 w-32 shadow-md bg-white rounded-lg">
-          {navigationItems.map((item, index) =>
-            item.path ? (
-              <Link key={index} to={item.path} className="cursor-pointer ml-5 text-sm group flex flex-col">
-                <span>{item.name}</span>
-                <span className="w-0 h-0.5 bg-blue-700 transition-all duration-500 ease-in-out group-hover:w-14"></span>
-              </Link>
-            ) : (
-              <p
-                key={index}
-                className="cursor-pointer ml-5 text-sm group flex flex-col"
-                onClick={() => scrollToSection(item.ref)}
-              >
-                <span>{item.name}</span>
-                <span className="w-0 h-0.5 bg-blue-700 transition-all duration-500 ease-in-out group-hover:w-14"></span>
-              </p>
-            ),
-          )}
+          {navigationItems.map((item, index) => (
+            <p key={index} onClick={() => handleClick(item)} className="group cursor-pointer flex flex-col">
+              <span className="hover:text-blue-600 hover:scale-105 text-base duration-100">{item.name}</span>
+              <span className="w-0 h-0.5 bg-blue-700 transition-all duration-500 ease-in-out group-hover:w-full"></span>
+            </p>
+          ))}
         </div>
       )}
     </div>

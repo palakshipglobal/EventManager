@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React from "react";
 import f1 from "../assets/f1.png";
 import f2 from "../assets/f2.png";
 import schedule from "../assets/schedule.png";
@@ -90,7 +90,7 @@ const EventFeatures = () => {
         </div>
         <LazyLoadImage
           src={f1}
-          className="rounded-xl scale-105 mt-16 lg:mt-5 hover:scale-110 hidden md:block transition duration-300 md:h-72 lg:h-[370px] w-full animate-appear"
+          className="rounded-xl scale-105 mt-16 lg:mt-5 hover:scale-110 hidden md:block transition duration-300 md:h-72 lg:h-370 w-full animate-appear"
         />
       </div>
 
@@ -98,7 +98,6 @@ const EventFeatures = () => {
         <LazyLoadImage
           src={f2}
           className="rounded-xl scale-105 mt-16 lg:mt-10 hover:scale-110 hidden md:block transition duration-300 md:h-72 lg:h-[370px] w-full animate-appear"
-          // loading="lazy"
         />
         <div className="animate-slideInRight">
           {features2.map((feature, index) => (

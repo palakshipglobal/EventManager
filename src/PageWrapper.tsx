@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
-export default function PageWrapper({ children }) {
+export default function PageWrapper() {
   const heroSectionRef = useRef(null);
   const featuresRef = useRef(null);
   const benefitsRef = useRef(null);

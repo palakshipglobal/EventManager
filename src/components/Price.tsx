@@ -48,7 +48,6 @@ const Price = () => {
       <div className="my-auto hidden md:block ml-4 md:ml-2 lg:ml-10">
         <button
           onClick={handleLeftClick}
-          disabled={activeIndex === 0}
           className={`h-10 w-10 shadow-md rounded-full border border-gray-200 ${
             activeIndex === 0 ? "hidden" : "cursor-pointer"
           }`}
@@ -74,7 +73,6 @@ const Price = () => {
       <div className="my-auto hidden md:block mr-2 lg:mr-10">
         <button
           onClick={handleRightClick}
-          disabled={activeIndex === cards.length - 1}
           className={`h-10 w-10 shadow-md rounded-full border border-gray-200 ${
             activeIndex === cards.length - 1 ? "hidden" : "cursor-pointer"
           }`}

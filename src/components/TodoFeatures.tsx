@@ -47,7 +47,7 @@ const TodoFeatures = () => {
         projects or personal tasks, this feature helps you achieve your goals efficiently.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 md:mt-20 mt-8 gap-y-2 md:gap-y-5">
-        {tasks.map((task, index) => (
+        {tasks.map((task) => (
           <div className="flex flex-col text-center p-3 md:p-5">
             <img src={task.icon} className="w-8 h-8 mx-auto" alt={task.title} />
             <p className="text-lg mt-2 md:mt-4 font-medium">{task.title}</p>

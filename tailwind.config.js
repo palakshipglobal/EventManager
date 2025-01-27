@@ -23,6 +23,11 @@ export default {
         appear: "appear 1s ease-out",
       },
     },
+    height: {
+      400: "400px",
+      550: "550px",
+      370: "370px",
+    },
   },
   plugins: [],
 };

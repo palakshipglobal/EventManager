@@ -23,7 +23,7 @@ function AboutGradient() {
       Icon: blog,
     },
     {
-      text: "Collaboration",
+      text: "Collaborate",
       description: "Work together seamlessly with team-focused tools.",
       Icon: collab,
     },
@@ -45,7 +45,7 @@ function AboutGradient() {
           </button>
         </div>
       </div>
-      <div className="grid-cols-4 md:block mt-20 md:-mt-8 relative z-10 p-5">
+      <div className="grid-cols-4 md:block mt-16 md:-mt-8 relative z-10 p-5">
         <div className="relative">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-5 transform -translate-y-1/2">
             {cardData.map((data, index) => (

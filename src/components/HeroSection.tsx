@@ -44,7 +44,7 @@ const HeroSection = ({ refs }) => {
         </div>
       </div>
       <div className="md:px-24 lg:px-32 hidden md:block">
-        <LazyLoadImage src={home2} alt="" className="md:h-[400px] lg:h-[550px] mt-14 h-72 w-full rounded-xl" />
+        <LazyLoadImage src={home2} alt="" className="md:h-400 lg:h-550 mt-14 h-72 w-full rounded-xl" />
       </div>
     </div>
   );
