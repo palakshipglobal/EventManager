@@ -9,7 +9,7 @@ import color from "../assets/color-palette.png";
 import community from "../assets/community.png";
 import customisation from "../assets/customisation.png";
 import tick from "../assets/tick.png";
-// import { LazyLoadImage } from "react-lazy-load-image-component";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const EventFeatures = () => {
   const features = [
@@ -88,14 +88,14 @@ const EventFeatures = () => {
             </div>
           ))}
         </div>
-        <img
+        <LazyLoadImage
           src={f1}
           className="rounded-xl scale-105 mt-16 lg:mt-5 hover:scale-110 hidden md:block transition duration-300 md:h-72 lg:h-[370px] w-full animate-appear"
         />
       </div>
 
       <div className="md:mt-20 mt-2 grid grid-cols-1 md:grid-cols-2 gap-16 px-3">
-        <img
+        <LazyLoadImage
           src={f2}
           className="rounded-xl scale-105 mt-16 lg:mt-10 hover:scale-110 hidden md:block transition duration-300 md:h-72 lg:h-[370px] w-full animate-appear"
           // loading="lazy"

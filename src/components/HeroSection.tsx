@@ -5,7 +5,7 @@ import free from "../assets/jackpot.png";
 import rating from "../assets/customer-satisfaction.png";
 import notification from "../assets/notification.png";
 import reminder from "../assets/reminder.png";
-// import { LazyLoadImage } from "react-lazy-load-image-component";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const HeroSection = ({ refs }) => {
   const data = [
@@ -44,7 +44,7 @@ const HeroSection = ({ refs }) => {
         </div>
       </div>
       <div className="md:px-24 lg:px-32 hidden md:block">
-        <img src={home2} alt="" className="md:h-[400px] lg:h-[550px] mt-14 h-72 w-full rounded-xl" />
+        <LazyLoadImage src={home2} alt="" className="md:h-[400px] lg:h-[550px] mt-14 h-72 w-full rounded-xl" />
       </div>
     </div>
   );

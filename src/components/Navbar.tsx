@@ -4,7 +4,7 @@ import { Menu } from "lucide-react";
 import logo from "../assets/Logo.png";
 import Button from "./Button";
 
-const Navbar = ({ refs }) => {
+const Navbar = ({ refs }: { refs?: any }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleIsOpen = () => {
@@ -12,13 +12,13 @@ const Navbar = ({ refs }) => {
   };
 
   const navigationItems = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/"},
     { name: "Features", ref: refs.featuresRef },
     { name: "Benefits", ref: refs.benefitsRef },
-    { name: "About Us", path: "/about-us" },
+    { name: "About Us", path: "/about-us"},
   ];
 
-  const scrollToSection = (sectionRef) => {
+  const scrollToSection = (sectionRef: any) => {
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -38,7 +38,11 @@ const Navbar = ({ refs }) => {
               <span className="w-0 h-0.5 bg-blue-700 transition-all duration-500 ease-in-out group-hover:w-full"></span>
             </Link>
           ) : (
-            <p key={index} className="cursor-pointer group flex flex-col" onClick={() => scrollToSection(item.ref)}>
+            <p
+              key={index}
+              className="cursor-pointer group flex flex-col"
+              onClick={() => item.ref && scrollToSection(item.ref ? item.ref : "#")}
+            >
               <span>{item.name}</span>
               <span className="w-0 h-0.5 bg-blue-700 transition-all duration-500 ease-in-out group-hover:w-full"></span>
             </p>

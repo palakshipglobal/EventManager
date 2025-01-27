@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const Accordion = ({ id, title, description, isOpen, onToggle }) => {

@@ -9,17 +9,7 @@ import Price from "./Price";
 import FAQ from "./FAQ";
 import Footer from "./Footer";
 
-const Home = () => {
-  const heroSectionRef = useRef(null);
-  const featuresRef = useRef(null);
-  const benefitsRef = useRef(null);
-
-  const refs = {
-    heroSectionRef,
-    featuresRef,
-    benefitsRef,
-  };
-
+const Home = ({ refs }) => {
   return (
     <div>
       <Navbar refs={refs} />
