@@ -60,9 +60,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="my-5 text-gray-700 px-6 md:px-12 lg:px-16 flex justify-between">
+      <div className="my-1 text-gray-700 px-6 md:px-12 lg:px-16 flex justify-between">
         <div className="flex md:gap-1 gap-0.5">
-          <Copyright className="w-4 h-4 md:mt-0.5" />
+          <Copyright className="size-3 mt-1" />
           <span className="text-xs md:text-sm">2025 All rights Reserved</span>
         </div>
 

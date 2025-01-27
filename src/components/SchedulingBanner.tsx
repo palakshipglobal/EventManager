@@ -7,7 +7,7 @@ const SchedulingBanner = () => {
       <div className="bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 text-white grid grid-cols-1 md:grid-cols-2 rounded-xl lg:gap-10">
         <div className="lg:px-10 p-5 lg:pt-20 pt-10">
           <p className="text-3xl font-semibold">Take your Scheduling to next level</p>
-          <p className="text-sm my-6">
+          <p className="my-6">
             From effortless task organization to seamless calendar integration, it makes managing your schedule easier
             than ever. Intuitive reminders and alerts ensure you never miss a deadline, while its user-friendly
             interface and powerful tools help you stay organized and prioritize tasks effectively.

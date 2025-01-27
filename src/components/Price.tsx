@@ -44,41 +44,46 @@ const Price = () => {
     if (activeIndex < cards.length - 1) setActiveIndex((prevIndex) => prevIndex + 1);
   };
   return (
-    <div className="flex md:items-center md:justify-center flex-col md:flex-row mt-16">
-      <div className="my-auto hidden md:block ml-4 md:ml-2 lg:ml-10">
-        <button
-          onClick={handleLeftClick}
-          className={`h-10 w-10 shadow-md rounded-full border border-gray-200 ${
-            activeIndex === 0 ? "hidden" : "cursor-pointer"
-          }`}
-        >
-          <ChevronLeft className="size-10 p-1 text-blue-600" />
-        </button>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 mt-6 md:mt-10 px-6">
-        {cards.map((card, index) => (
-          <div key={index} onClick={() => setActiveIndex(index)}>
-            <PricingCard
-              packageLabel={card.packageLabel}
-              description={card.description}
-              description2={card.description2}
-              price={card.price}
-              text={card.text}
-              index={index}
-              activeIndex={activeIndex}
-            />
-          </div>
-        ))}
-      </div>
-      <div className="my-auto hidden md:block mr-2 lg:mr-10">
-        <button
-          onClick={handleRightClick}
-          className={`h-10 w-10 shadow-md rounded-full border border-gray-200 ${
-            activeIndex === cards.length - 1 ? "hidden" : "cursor-pointer"
-          }`}
-        >
-          <ChevronRight className="size-10 p-1 text-blue-600" />
-        </button>
+    <div>
+      <p className="text-2xl lg:px-28 mt-12 font-semibold text-center lg:text-start">
+        Choose your <span className="text-blue-600 text-3xl">Plan</span>
+      </p>
+      <div className="flex md:items-center md:justify-center flex-col md:flex-row mt-3">
+        <div className="my-auto hidden md:block ml-4 md:ml-2 lg:ml-10">
+          <button
+            onClick={handleLeftClick}
+            className={`h-10 w-10 shadow-md rounded-full border border-gray-200 ${
+              activeIndex === 0 ? "hidden" : "cursor-pointer"
+            }`}
+          >
+            <ChevronLeft className="size-10 p-1 text-blue-600" />
+          </button>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 mt-6 md:mt-10 px-6">
+          {cards.map((card, index) => (
+            <div key={index} onClick={() => setActiveIndex(index)}>
+              <PricingCard
+                packageLabel={card.packageLabel}
+                description={card.description}
+                description2={card.description2}
+                price={card.price}
+                text={card.text}
+                index={index}
+                activeIndex={activeIndex}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="my-auto hidden md:block mr-2 lg:mr-10">
+          <button
+            onClick={handleRightClick}
+            className={`h-10 w-10 shadow-md rounded-full border border-gray-200 ${
+              activeIndex === cards.length - 1 ? "hidden" : "cursor-pointer"
+            }`}
+          >
+            <ChevronRight className="size-10 p-1 text-blue-600" />
+          </button>
+        </div>
       </div>
     </div>
   );

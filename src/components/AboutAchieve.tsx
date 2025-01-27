@@ -5,6 +5,7 @@ import team from "../assets/team.jpg";
 import progress from "../assets/performance.png";
 import commitment from "../assets/network.png";
 import honesty from "../assets/customer-satisfaction.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 function AboutAchieve() {
   const achieveCardData = [
     {
@@ -29,7 +30,7 @@ function AboutAchieve() {
   return (
     <div className="md:mt-24 mt-8 flex flex-col gap-y-5">
       <div className="flex gap-5">
-        <img src={team} className="h-72 rounded-lg md:pl-10 hidden md:block md:w-1/2" />
+        <LazyLoadImage src={team} className="h-72 rounded-lg md:pl-10 hidden md:block md:w-1/2" />
         <div className="flex flex-col bg-blue-100 rounded-xl py-5 px-10">
           <p className="text-2xl font-medium">We're here to help you achieve your goals</p>
           <p className="text-sm mt-3">

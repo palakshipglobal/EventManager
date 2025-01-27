@@ -11,61 +11,73 @@ import customisation from "../assets/customisation.png";
 import tick from "../assets/tick.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
+const features = [
+  {
+    img: schedule,
+    title: "Easy Event Creation",
+    description: "quickly Add events with titles, descriptions, and specific dates to keep your plans organized.",
+    highlight: "Add events",
+  },
+  {
+    img: active,
+    title: "Reminders & Notifications",
+    description: "Set reminders to ensure you never miss an important deadline, meeting, or special occasion.",
+    highlight: "Set reminders",
+  },
+  {
+    img: calender,
+    title: "Recurring Events",
+    description: "Schedule recurring tasks such as weekly meetings, birthdays, and anniversaries effortlessly.",
+    highlight: "Schedule recurring tasks",
+  },
+  {
+    img: customisation,
+    title: "Customizable Views",
+    description: "Switch between daily, weekly, or monthly views for better visualization of your schedule.",
+    highlight: "Switch",
+  },
+];
+const features2 = [
+  {
+    img: tick,
+    title: "Sync Across Devices",
+    description: "access your events anytime, anywhere by syncing across multiple devices.",
+    highlight: "Syncing",
+  },
+  {
+    img: color,
+    title: "Color Coding",
+    description: "helps in categorizing your events Different colors to prioritize and differentiate them easily.",
+    highlight: "Different colors",
+  },
+  {
+    img: chat,
+    title: "User-Friendly Interface",
+    description: "Navigate the calendar seamlessly with an intuitive and responsive design.",
+    highlight: "Navigate",
+  },
+  {
+    img: community,
+    title: "Collaboration Options",
+    description: "Share events with family, friends, or team members to keep everyone informed.",
+    highlight: "Share",
+  },
+];
+
 const EventFeatures = () => {
-  const features = [
-    {
-      img: schedule,
-      title: "Easy Event Creation",
-      description: "quickly Add events with titles, descriptions, and specific dates to keep your plans organized.",
-      highlight: "Add events",
-    },
-    {
-      img: active,
-      title: "Reminders & Notifications",
-      description: "Set reminders to ensure you never miss an important deadline, meeting, or special occasion.",
-      highlight: "Set reminders",
-    },
-    {
-      img: calender,
-      title: "Recurring Events",
-      description: "Schedule recurring tasks such as weekly meetings, birthdays, and anniversaries effortlessly.",
-      highlight: "Schedule recurring tasks",
-    },
-    {
-      img: customisation,
-      title: "Customizable Views",
-      description: "Switch between daily, weekly, or monthly views for better visualization of your schedule.",
-      highlight: "Switch",
-    },
-  ];
-  const features2 = [
-    {
-      img: tick,
-      title: "Sync Across Devices",
-      description: "access your events anytime, anywhere by syncing across multiple devices.",
-      highlight: "Syncing",
-    },
-    {
-      img: color,
-      title: "Color Coding",
-      description: "helps in categorizing your events Different colors to prioritize and differentiate them easily.",
-      highlight: "Different colors",
-    },
-    {
-      img: chat,
-      title: "User-Friendly Interface",
-      description: "Navigate the calendar seamlessly with an intuitive and responsive design.",
-      highlight: "Navigate",
-    },
-    {
-      img: community,
-      title: "Collaboration Options",
-      description: "Share events with family, friends, or team members to keep everyone informed.",
-      highlight: "Share",
-    },
-  ];
   return (
     <div className="md:mt-10 mt-6">
+      <FeatureSection1 />
+      <FeatureSection2 />
+    </div>
+  );
+};
+
+export default EventFeatures;
+
+const FeatureSection1 = () => {
+  return (
+    <div>
       <p className="md:text-2xl text-xl font-medium animate-appear text-center">
         Effortlessly organize your schedule with our{" "}
         <span className="text-blue-600 md:text-3xl text-2xl">event calendar feature</span>. Whether you're planning{" "}
@@ -93,7 +105,13 @@ const EventFeatures = () => {
           className="rounded-xl scale-105 mt-16 lg:mt-5 hover:scale-110 hidden md:block transition duration-300 md:h-72 lg:h-370 w-full animate-appear"
         />
       </div>
+    </div>
+  );
+};
 
+const FeatureSection2 = () => {
+  return (
+    <div>
       <div className="md:mt-20 mt-2 grid grid-cols-1 md:grid-cols-2 gap-16 px-3">
         <LazyLoadImage
           src={f2}
@@ -122,5 +140,3 @@ const EventFeatures = () => {
     </div>
   );
 };
-
-export default EventFeatures;

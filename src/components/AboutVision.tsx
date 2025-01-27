@@ -1,5 +1,6 @@
 import React from "react";
 import people from "../assets/about.png";
+import {  LazyLoadImage } from "react-lazy-load-image-component";
 
 function AboutVision() {
   const lightCardData = [
@@ -30,7 +31,7 @@ function AboutVision() {
       <div className="mt-2 md:mt-14">
         <div className="grid grid-cols-1 items-center md:grid-cols-2">
           <div className="flex flex-col w-5/6">
-            <img src={people} className="h-96 hidden md:block" />
+            <LazyLoadImage src={people} className="h-96 hidden md:block" />
           </div>
           <div className="flex flex-col gap-y-2 mt-8 md:mt-0">
             {lightCardData.map((item, index) => (
