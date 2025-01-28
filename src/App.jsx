@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import PageWrapper from "./PageWrapper";
-import Login2 from "./authentication/Login2";
+import LoginPage from "./authentication/LoginPage";
 import Signup from "./authentication/Signup";
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
     },
     {
       path: "/login",
-      element: <Login2 />,
+      element: <LoginPage />,
     },
     {
       path: "/signup",

@@ -10,9 +10,6 @@ function LoginPage() {
   };
   return (
     <div>
-      <p className="font-semibold text-xl text-center flex flex-col p-8 tracking-tight">
-       
-      </p>
       {type === "login" && <Login handleTypeChange={handleTypeChange} />}
       {type === "forgotPassword" && <ForgotPassword handleTypeChange={handleTypeChange} />}
     </div>
