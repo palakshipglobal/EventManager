@@ -54,7 +54,7 @@ const Navbar = ({ refs }) => {
         <div className="flex items-center text-blue-600 justify-center gap-1 cursor-pointer">
           <Link to="/login">Login</Link>
           <p className="text-black">/</p>
-          <p>Register</p>
+          <Link to="/signup">Register</Link>
         </div>
       </div>
       {isOpen && (
