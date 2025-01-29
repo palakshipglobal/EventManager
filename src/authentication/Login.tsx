@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import login from "../assets/loginImg.png";
-
 import Input from "./Input";
 import Label from "./Label";
 import { EyeOff, Eye } from "lucide-react";
@@ -20,8 +19,8 @@ function Login({ handleTypeChange }: LoginProps) {
   };
 
   return (
-    <div className="flex w-screen min-h-screen bg-blue-50 flex-col md:flex-row items-center justify-center px-3">
-      <LazyLoadImage src={login} className="max-h-screen h-32 w-40 lg:-ml-32 md:w-1/2 md:h-1/2" />
+    <div className="flex w-screen min-h-screen bg-blue-50 flex-col md:flex-row items-center md:justify-center px-3">
+      <LazyLoadImage src={login} className="max-h-screen mt-10 md:mt-0 h-32 w-40 lg:-ml-32 md:w-1/2 md:h-1/2" />
       <div className="lg:w-1/3 lg:-ml-20 shadow-lg bg-white/20 rounded-lg p-5">
         <div className="flex gap-x-4 items-center justify-center">
           <img src={logo} className="w-9 h-9" />
@@ -29,7 +28,7 @@ function Login({ handleTypeChange }: LoginProps) {
             <span className="text-blue-600">W</span>elcome back!
           </p>
         </div>
-        <p className="mt-2 md:mt-5 text-xs ml-16 md:text-base">
+        <p className="mt-3 md:mt-5 text-xs text-center md:text-base">
           Let's get you ready for your next unforgettable event.
         </p>
         <div className="flex flex-col">
@@ -37,7 +36,7 @@ function Login({ handleTypeChange }: LoginProps) {
             <Label title="Email" className="mt-5" />
             <Required className="mt-5" />
           </div>
-          <Input type="email" className="mt-1" placeholder="Enter your email..." />
+          <Input type="email" className="mt-1 w-full" placeholder="Enter your email..." />
           <div className="flex">
             <Label title="Password" className="mt-5" />
             <Required className="mt-5" />
