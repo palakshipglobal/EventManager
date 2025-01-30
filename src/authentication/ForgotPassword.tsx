@@ -33,12 +33,14 @@ function ForgotPassword({ handleTypeChange }: ForgotPasswordProps) {
             <Required className="mt-5" />
           </div>
           <Input type="email" className="mt-1 w-full" placeholder="Enter your email..." />
-          <span
-            className="text-blue-700 hover:underline cursor-pointer text-xs mt-2"
-            onClick={() => handleTypeChange("login")}
-          >
-            Return to Login
-          </span>
+          <div className="flex justify-end">
+            <span
+              className="text-blue-700 hover:underline cursor-pointer text-xs mt-2"
+              onClick={() => handleTypeChange("login")}
+            >
+              Return to Login
+            </span>
+          </div>
           <button className="bg-blue-600 hover:bg-blue-500 text-white w-full py-2 rounded-lg mt-8">Submit</button>
           <p className="mt-2 md:mt-5 text-xs text-center">
             Don't have an account?{" "}

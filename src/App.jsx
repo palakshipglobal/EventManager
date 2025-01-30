@@ -5,7 +5,8 @@ import About from "./components/About";
 import PageWrapper from "./PageWrapper";
 import LoginPage from "./authentication/LoginPage";
 import Signup from "./authentication/Signup";
-import ResetPassword from "./authentication/ResetPassword";
+import { ResetPassword } from "./authentication/ResetPassword";
+import OTP from "./authentication/OTP";
 
 function App() {
   const heroSectionRef = useRef(null);
@@ -38,6 +39,10 @@ function App() {
     {
       path: "/reset",
       element: <ResetPassword />,
+    },
+    {
+      path: "/otp",
+      element: <OTP />,
     },
   ]);
   return <RouterProvider router={router} />;
