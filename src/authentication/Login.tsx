@@ -21,7 +21,7 @@ function Login({ handleTypeChange }: LoginProps) {
 
   return (
     <div className="flex bg-blue-50 min-h-screen flex-col md:flex-row p-3 md:p-0">
-      <LazyLoadImage src={bg} className="hidden max-h-screen md:block md:w-3/5 lg:w-1/2 md:-ml-10 lg:-ml-0" />
+      <LazyLoadImage src={bg} className="hidden max-h-screen md:block md:w-3/5 lg:w-1/2  lg:-ml-0" />
       <LazyLoadImage src={loginImg} className="md:hidden mx-auto h-32 w-40" />
       <div className="shadow-lg md:-ml-24 rounded-xl max-h-max lg:px-10 md:my-auto z-50 bg-blue-50 p-5">
         <div className="flex gap-x-4 items-center justify-center ">
