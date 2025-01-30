@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import login from "../assets/loginImg.png";
+import bg from "../assets/bg.jpg";
 import Input from "./Input";
 import Label from "./Label";
 import { EyeOff, Eye } from "lucide-react";
 import logo from "../assets/Logo.png";
 import { Link } from "react-router-dom";
 import Required from "./Required";
+import loginImg from "../assets/loginImg.png";
 
 interface LoginProps {
   handleTypeChange: (newType: "login" | "forgotPassword") => void;
@@ -19,12 +20,13 @@ function Login({ handleTypeChange }: LoginProps) {
   };
 
   return (
-    <div className="flex w-screen min-h-screen bg-blue-50 flex-col md:flex-row items-center md:justify-center px-3">
-      <LazyLoadImage src={login} className="max-h-screen mt-10 md:mt-0 h-32 w-40 lg:-ml-32 md:w-1/2 md:h-1/2" />
-      <div className="lg:w-1/3 lg:-ml-20 shadow-lg bg-white/20 rounded-lg p-5">
-        <div className="flex gap-x-4 items-center justify-center">
+    <div className="flex bg-blue-50 min-h-screen flex-col md:flex-row p-3 md:p-0">
+      <LazyLoadImage src={bg} className="hidden max-h-screen md:block md:w-3/5 lg:w-1/2 md:-ml-10 lg:-ml-0" />
+      <LazyLoadImage src={loginImg} className="md:hidden mx-auto h-32 w-40" />
+      <div className="shadow-lg md:-ml-24 rounded-xl max-h-max lg:px-10 md:my-auto z-50 bg-blue-50 p-5">
+        <div className="flex gap-x-4 items-center justify-center ">
           <img src={logo} className="w-9 h-9" />
-          <p className="text-3xl font-medium">
+          <p className="text-xl md:text-3xl font-medium">
             <span className="text-blue-600">W</span>elcome back!
           </p>
         </div>

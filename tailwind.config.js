@@ -28,9 +28,7 @@ export default {
       550: "550px",
       370: "370px",
     },
-    backgroundImage: {
-      image: "url('./assets/a.png')",
-    },
+    
   },
   plugins: [],
 };
